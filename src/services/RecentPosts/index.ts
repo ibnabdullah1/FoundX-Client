@@ -8,5 +8,7 @@ export const getRecentPosts = async () => {
 
   await delay(5000);
 
-  return res.json();
+  const data = await res.json();
+
+  return data;
 };
