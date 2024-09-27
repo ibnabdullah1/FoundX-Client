@@ -7,8 +7,8 @@ import {
   useEffect,
   useState,
 } from "react";
-import { IUser } from "../types";
 import { getCurrentUser } from "../services/AuthService";
+import { IUser } from "../types";
 
 const UserContext = createContext<IUserProviderValues | undefined>(undefined);
 
@@ -41,7 +41,7 @@ const UserProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useUser = () => {
+export const useUser: any = () => {
   const context = useContext(UserContext);
 
   if (context === undefined) {
