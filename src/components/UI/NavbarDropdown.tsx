@@ -6,12 +6,12 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/dropdown";
+import { Avatar } from "@nextui-org/avatar";
+import { usePathname, useRouter } from "next/navigation";
 
 import { protectedRoutes } from "@/src/constant";
 import { useUser } from "@/src/context/user.provider";
 import { logout } from "@/src/services/AuthService";
-import { Avatar } from "@nextui-org/avatar";
-import { usePathname, useRouter } from "next/navigation";
 
 export default function NavbarDropdown() {
   const router = useRouter();
@@ -46,10 +46,10 @@ export default function NavbarDropdown() {
           Create Post
         </DropdownItem>
         <DropdownItem
-          onClick={() => handleLogout()}
           key="delete"
           className="text-danger"
           color="danger"
+          onClick={() => handleLogout()}
         >
           Logout
         </DropdownItem>

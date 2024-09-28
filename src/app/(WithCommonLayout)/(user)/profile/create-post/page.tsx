@@ -11,6 +11,7 @@ import {
   useFieldArray,
   useForm,
 } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 import { AddIcon, TrashIcon } from "@/src/assets/icons";
 import FXDatePicker from "@/src/components/form/FXDatePicker";
@@ -22,7 +23,6 @@ import { useUser } from "@/src/context/user.provider";
 import { useGetCategories } from "@/src/hooks/categoreis.hook";
 import { useCreatePost } from "@/src/hooks/post.hook";
 import dateToISO from "@/src/utils/dateToISO";
-import { useRouter } from "next/navigation";
 
 const cityOptions = allDistict()
   .sort()
@@ -54,6 +54,7 @@ export default function CreatePost() {
   } = useGetCategories();
 
   let categoryOption: { key: string; label: string }[] = [];
+
   if (categoriesData?.data && !categoryLoading) {
     categoryOption = categoriesData.data
       .sort()
