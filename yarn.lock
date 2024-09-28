@@ -390,7 +390,7 @@
     "@nextui-org/system-rsc" "2.1.5"
     "@react-types/shared" "3.23.1"
 
-"@nextui-org/dropdown@^2.1.29":
+"@nextui-org/dropdown@^2.1.31":
   version "2.1.31"
   resolved "https://registry.npmjs.org/@nextui-org/dropdown/-/dropdown-2.1.31.tgz"
   integrity sha512-tP6c5MAhWK4hJ6U02oX6APUpjjrn97Zn7t+56Xx4YyQOSj0CJx18VF0JsU+MrjFZxPX3UBKU3B2zGBHOEGE4Kw==
@@ -3758,6 +3758,7 @@ natural-compare@^1.4.0:
   version "0.0.1"
   resolved "file:"
   dependencies:
+    "@bangladeshi/bangladesh-address" "^1.0.5"
     "@hookform/resolvers" "^3.9.0"
     "@nextui-org/avatar" "^2.0.32"
     "@nextui-org/button" "2.0.37"

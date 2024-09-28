@@ -54,7 +54,6 @@ export default function CreatePost() {
   } = useGetCategories();
 
   let categoryOption: { key: string; label: string }[] = [];
-
   if (categoriesData?.data && !categoryLoading) {
     categoryOption = categoriesData.data
       .sort()
