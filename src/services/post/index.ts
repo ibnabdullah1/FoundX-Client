@@ -11,12 +11,10 @@ export const createPost = async (formData: FormData): Promise<any> => {
         "Content-Type": "multipart/form-data",
       },
     });
-
     revalidateTag("posts");
 
     return data;
   } catch (error) {
-    console.log(error);
     throw new Error("Failed to create post");
   }
 };

@@ -3,6 +3,7 @@
 import { allDistict } from "@bangladeshi/bangladesh-address";
 import { Button } from "@nextui-org/button";
 import { Divider } from "@nextui-org/divider";
+import { useRouter } from "next/navigation";
 import { ChangeEvent, useState } from "react";
 import {
   FieldValues,
@@ -11,7 +12,6 @@ import {
   useFieldArray,
   useForm,
 } from "react-hook-form";
-import { useRouter } from "next/navigation";
 
 import { AddIcon, TrashIcon } from "@/src/assets/icons";
 import FXDatePicker from "@/src/components/form/FXDatePicker";
@@ -82,7 +82,6 @@ export default function CreatePost() {
       dateFound: dateToISO(data.dateFound),
       user: user!._id,
     };
-
     formData.append("data", JSON.stringify(postData));
 
     for (let image of imageFiles) {
